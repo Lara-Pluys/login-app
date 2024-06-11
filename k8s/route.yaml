@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: react-app
+  name: login-app
 spec:
   to:
     kind: Service
-    name: react-app-service
+    name: login-app-service
   port:
     targetPort: 80
   tls:
