@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-app
+  name: login-app
   labels:
-    app: react-app
+    app: login-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: react-app
+      app: login-app
   template:
     metadata:
       labels:
-        app: react-app
+        app: login-app
     spec:
       containers:
-        - name: react-app
-          image: image-registry.openshift-image-registry.svc:5000/default/react-app:latest
+        - name: login-app
+          image: image-registry.openshift-image-registry.svc:5000/default/login-app:latest
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
